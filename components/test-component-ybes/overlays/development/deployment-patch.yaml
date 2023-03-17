@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-component-ybes
+  namespace: build-e2e-hraj-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:1c48e721cba55bde0fd8ad4c95bac5b4308f2db8de1f5cf5a06b65f8c2030c2c
+        name: my-python
+        resources: {}
+status: {}
